@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour
     public static int OrnamentsOnTree = 0;
     private Vector3 screenPosition;
     private Vector3 targetWorldPosition;
-    private float groundOffset = 0.5f;
+    private float groundOffset = 0.3f;
     private int maxRayDistance = 10;
     [SerializeField] private LayerMask layersToHit;
     private GameObject heldObject = null;
@@ -54,6 +54,7 @@ public class Pickup : MonoBehaviour
                     {
                         // if yes, put it down
                         Vector3 putdownTarget = new Vector3(targetWorldPosition.x, targetWorldPosition.y + groundOffset, targetWorldPosition.z);
+                        heldObject.GetComponent<Rigidbody>().isKinematic = false;
                         PutDownObject(heldObject, putdownTarget);
                     }
                 }
@@ -66,6 +67,7 @@ public class Pickup : MonoBehaviour
         heldObject = obj;
         heldObject.transform.position = heldPosition;
         heldObject.transform.SetParent(null);
+        heldObject.GetComponent<Rigidbody>().isKinematic = true;
     }
     private void PutDownObject(GameObject obj, Vector3 target)
     {
