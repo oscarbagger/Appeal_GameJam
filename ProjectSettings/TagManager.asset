@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
+  - Pickup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pickup
   - Water
   - UI
-  - 
+  - Tree
   - 
   - 
   - 

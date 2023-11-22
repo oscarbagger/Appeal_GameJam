@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotatingTree : MonoBehaviour
 {
-    private float rotateSpeed=1;
+    [SerializeField] private float rotateSpeed=1;
     // Start is called before the first frame update
     void Start()
     {
