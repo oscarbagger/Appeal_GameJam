@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     public static int OrnamentsOnTree = 0;
     private Vector3 screenPosition;
     private Vector3 targetWorldPosition;
+    private float groundOffset = 0.5f;
     private int maxRayDistance = 10;
     [SerializeField] private LayerMask layersToHit;
     private GameObject heldObject = null;
@@ -17,7 +18,7 @@ public class Pickup : MonoBehaviour
     {
         screenPosition = Input.mousePosition;
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (Physics.Raycast(ray, out RaycastHit hitdata, maxRayDistance, layersToHit))
             {
@@ -29,9 +30,11 @@ public class Pickup : MonoBehaviour
                     if (heldObject == null)
                     {
                         // if no, pick up this object.
-                        heldObject = hitObj;
-                        heldObject.transform.position = heldPosition;
-                        heldObject.GetComponent<Collider>().enabled = false;
+                        PickUpObject(hitObj);
+                    }
+                    if (heldObject!=null)
+                    {
+                        //switch with other object
                     }
                 }
                 if (hitObj.CompareTag("Tree"))
@@ -39,16 +42,40 @@ public class Pickup : MonoBehaviour
                     // do we have held object?
                     if (heldObject!=null)
                     {
-                        // if yes, put its position to targetworld position, set tree as parent and remove the heldobj reference
-                        heldObject.transform.position = targetWorldPosition;
-                        heldObject.transform.SetParent(hitObj.transform);
-                        heldObject = null;
+                        // if yes, put it on the tree
+                        PutDownObject(heldObject, targetWorldPosition, hitObj.transform);
                         OrnamentsOnTree++;
                     }
-
+                }
+                if(hitObj.CompareTag("Ground"))
+                {
+                    // do we have held object?
+                    if (heldObject != null)
+                    {
+                        // if yes, put it down
+                        Vector3 putdownTarget = new Vector3(targetWorldPosition.x, targetWorldPosition.y + groundOffset, targetWorldPosition.z);
+                        PutDownObject(heldObject, putdownTarget);
+                    }
                 }
 
             }
         }
+    }
+    private void PickUpObject(GameObject obj)
+    {
+        heldObject = obj;
+        heldObject.transform.position = heldPosition;
+        heldObject.transform.SetParent(null);
+    }
+    private void PutDownObject(GameObject obj, Vector3 target)
+    {
+        heldObject.transform.position = target;
+        heldObject = null;
+    }
+    private void PutDownObject(GameObject obj, Vector3 target, Transform parent)
+    {
+        heldObject.transform.position = target;
+        heldObject.transform.SetParent(parent);
+        heldObject = null;
     }
 }
