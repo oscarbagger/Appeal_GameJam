@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public static int OrnamentsOnTree = 0;
     private Vector3 screenPosition;
     private Vector3 targetWorldPosition;
     private int maxRayDistance = 10;
     [SerializeField] private LayerMask layersToHit;
     private GameObject heldObject = null;
-    private Vector3 heldPosition = new Vector3(0,-0.3f,-4.5f);
+    private Vector3 heldPosition;
+    [SerializeField] private Vector3 heldPositionOffset;
 
+    private void Start()
+    {
+        heldPosition = new Vector3(transform.position.x+heldPositionOffset.x, transform.position.y + heldPositionOffset.y, transform.position.z + heldPositionOffset.z);
+    }
     // Update is called once per frame
     void Update()
     {
-
         screenPosition = Input.mousePosition;
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
         if (Input.GetMouseButton(0))
@@ -43,6 +48,7 @@ public class Pickup : MonoBehaviour
                         heldObject.transform.position = targetWorldPosition;
                         heldObject.transform.SetParent(hitObj.transform);
                         heldObject = null;
+                        OrnamentsOnTree++;
                     }
 
                 }
