@@ -10,13 +10,8 @@ public class Pickup : MonoBehaviour
     private int maxRayDistance = 10;
     [SerializeField] private LayerMask layersToHit;
     private GameObject heldObject = null;
-    private Vector3 heldPosition;
-    [SerializeField] private Vector3 heldPositionOffset;
+    [SerializeField] private Vector3 heldPosition;
 
-    private void Start()
-    {
-        heldPosition = new Vector3(transform.position.x+heldPositionOffset.x, transform.position.y + heldPositionOffset.y, transform.position.z + heldPositionOffset.z);
-    }
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +28,7 @@ public class Pickup : MonoBehaviour
                     // do we have held object?
                     if (heldObject == null)
                     {
-                        // if no pick up this object.
+                        // if no, pick up this object.
                         heldObject = hitObj;
                         heldObject.transform.position = heldPosition;
                         heldObject.GetComponent<Collider>().enabled = false;
@@ -44,7 +39,7 @@ public class Pickup : MonoBehaviour
                     // do we have held object?
                     if (heldObject!=null)
                     {
-                        // if yes put its position to targetworld position, set tree as parent and remove the heldobj reference
+                        // if yes, put its position to targetworld position, set tree as parent and remove the heldobj reference
                         heldObject.transform.position = targetWorldPosition;
                         heldObject.transform.SetParent(hitObj.transform);
                         heldObject = null;
