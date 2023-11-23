@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phillip.unity
     guid: 85792ae62b649304f846c82adc44b1c5
+  - enabled: 1
+    path: Assets/Scenes/Emil.unity
+    guid: 44c6fbc466e2042c98dca21bb97f1a0b
   m_configObjects: {}
