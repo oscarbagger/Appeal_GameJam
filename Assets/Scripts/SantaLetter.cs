@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SantaLetter : MonoBehaviour
 {
-
+    Audio_Man Audio;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-
+        Audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Man>();
+        Audio.Intro();
     }
 
     // Update is called once per frame
@@ -20,6 +21,8 @@ public class SantaLetter : MonoBehaviour
 
     public void NextScene()
     {
+        
         SceneManager.LoadScene(2);
+        
     }
 }

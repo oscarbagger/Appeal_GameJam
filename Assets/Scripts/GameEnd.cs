@@ -2,16 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketTree : MonoBehaviour
+public class GameEnd : MonoBehaviour
 {
     public AnimationCurve rocketCurve;
     public float animationTime;
     public float endPosY=50;
     public float cameraEndPosOffset = 0.5f;
     private bool isFlying = false;
-    [SerializeField] private GameObject tree, cam,gameEndText;
+    [SerializeField] private GameObject tree, cam, endGameButton, gameEndText;
     [SerializeField] private ParticleSystem particle;
 
+    private void Start()
+    {
+        endGameButton.SetActive(false);
+        gameEndText.SetActive(false);
+
+    }
+
+    private void Update()
+    {
+        if (Spawn_Box.boxes==0)
+        {
+            endGameButton.SetActive(true);
+        }
+    }
     public void LiftOff()
     {
         if (!isFlying)
