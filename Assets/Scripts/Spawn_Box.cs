@@ -18,6 +18,7 @@ public class Spawn_Box : MonoBehaviour
         if(this.transform.childCount == 0)
         { 
             Animat.SetTrigger("Box_Ball");
+            Animat.SetTrigger("Cane_gone");
         }
     }
 
