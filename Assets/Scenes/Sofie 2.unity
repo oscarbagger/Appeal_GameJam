@@ -6977,6 +6977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 50
+  zoom: {fileID: 0}
 --- !u!45 &1801876315
 Skybox:
   m_ObjectHideFlags: 0
