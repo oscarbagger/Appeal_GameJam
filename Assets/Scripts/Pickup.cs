@@ -8,7 +8,7 @@ public class Pickup : MonoBehaviour
     private Vector3 screenPosition;
     private Vector3 targetWorldPosition;
     private float groundOffset = 0.3f;
-    private int maxRayDistance = 10;
+    private int maxRayDistance = 15;
     [SerializeField] private LayerMask layersToHit;
     private GameObject heldObject = null;
     [SerializeField] private Vector3 heldPosition;
