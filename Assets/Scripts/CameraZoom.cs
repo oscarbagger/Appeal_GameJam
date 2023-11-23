@@ -30,7 +30,7 @@ public class CameraZoom : MonoBehaviour
             StartCoroutine(CameraMovement(Camera.main.transform.position, newPosition, zoomTime));
         }
     }
-
+    // https://medium.com/@rhysp/lerping-with-coroutines-and-animation-curves-4185b30f6002 
     private IEnumerator CameraMovement(Vector3 start, Vector3 end, float time)
     {
         zooming = true;
