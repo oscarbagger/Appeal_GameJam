@@ -45,8 +45,8 @@ public class GameEnd : MonoBehaviour
             particle.Play();
             endGameButton.SetActive(false);
             Audio.End();
-        }
 
+        }
     }
 
     // https://medium.com/@rhysp/lerping-with-coroutines-and-animation-curves-4185b30f6002 
@@ -62,5 +62,6 @@ public class GameEnd : MonoBehaviour
             yield return null;
         }
         gameEndText.SetActive(true);
+        
     }
 }
