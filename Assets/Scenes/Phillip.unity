@@ -595,7 +595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -31}
   m_SizeDelta: {x: 0, y: -0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006462192
@@ -1420,13 +1420,13 @@ MonoBehaviour:
   m_text: "My name is Sophie, I\u2019m 23 years old and live in Copenhagen. \nI've
     been very good this year and I hope I\u2019m on the nice list. \nThis year, I
     wish for a cozy Christmas game, with no competition. \nChristmas is my favorite
-    holiday of the year, it's so full of love and joy everywhere. I want it to be
-    cozy above all else with snow drilling down outside. I wish for presents under
-    the tree and Christmas music playing in the background to fully tie together
+    holiday of the year, it's so full of love and joy everywhere. I want the game
+    to be cozy above all else with snow drilling down outside. I wish for presents
+    under the tree and Christmas music playing in the background to fully tie together
     the Christmas coziness.  \r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce42c72b1511aa34f8ed357459223fbb, type: 2}
-  m_sharedMaterial: {fileID: 900303776807967558, guid: ce42c72b1511aa34f8ed357459223fbb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
+  m_sharedMaterial: {fileID: 4745618619330441754, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1450,8 +1450,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1460,9 +1460,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1486,10 +1486,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 40, y: 137.20093, z: 184.62402, w: 123.03174}
+  m_margin: {x: 44.8114, y: 122.21762, z: 189.4353, w: 123.03174}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1867568398
