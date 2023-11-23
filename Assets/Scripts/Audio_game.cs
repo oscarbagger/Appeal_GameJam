@@ -9,5 +9,7 @@ public class Audio_game : MonoBehaviour
     {
         Audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Man>();
         Audio.firstLoop();
+
     }
 }
+
