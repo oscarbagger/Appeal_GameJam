@@ -19,6 +19,13 @@ public class GameEnd : MonoBehaviour
 
     }
 
+    Audio_Man Audio;
+    private void Awake()
+    {
+        Audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Man>();
+        
+    }
+
     private void Update()
     {
         if (Spawn_Box.boxes==0)
@@ -37,6 +44,7 @@ public class GameEnd : MonoBehaviour
             isFlying = true;
             particle.Play();
             endGameButton.SetActive(false);
+            Audio.End();
         }
 
     }
