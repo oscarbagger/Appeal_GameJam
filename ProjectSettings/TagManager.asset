@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - Ground
   - Box_Balls
+  - Audio
   layers:
   - Default
   - TransparentFX

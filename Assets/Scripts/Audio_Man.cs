@@ -17,25 +17,27 @@ public class Audio_Man : MonoBehaviour
     public AudioClip SFX_2;
     public AudioClip SFX_3;
 
-    private void Start()
+  
+    public void Intro()
     {
-        music.clip = Background_intro;
-        music.Play();
+    
+            music.clip = Background_intro;
+            music.Play();
     }
 
-    private void firstLoop()
+    public void firstLoop()
     {
         music.clip = Background_1stLoop;
         music.Play();
     }
 
-    private void Loop()
+    public void Loop()
     {
         music.clip = Background_Loop;
         music.Play();
     }
 
-    private void End()
+    public void End()
     {
         music.clip = Background_End;
         music.Play();
