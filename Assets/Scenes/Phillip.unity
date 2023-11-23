@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5676734, g: 0.567685, b: 0.5829446, a: 1}
+  m_IndirectSpecularColor: {r: 0.5676906, g: 0.5676917, b: 0.582954, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Love, Sofie
+  m_text: Love, Sophie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce42c72b1511aa34f8ed357459223fbb, type: 2}
   m_sharedMaterial: {fileID: 900303776807967558, guid: ce42c72b1511aa34f8ed357459223fbb, type: 2}
@@ -806,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1501364646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1422,7 +1422,7 @@ MonoBehaviour:
     I want a christmas game, where i can decorate my own christmas tree in a cosy
     cabin, with snow drilling down outside. I wish for presents under the tree and
     Christmas music playing in the background to fully tie together the Christmas
-    coziness.  \r\n\nLove Sophie"
+    coziness.  \r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
   m_sharedMaterial: {fileID: 4745618619330441754, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
@@ -1449,8 +1449,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: -5
+  m_characterSpacing: -1
   m_wordSpacing: 0
   m_lineSpacing: -20
   m_lineSpacingMax: 0
@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 44.8114, y: 122.21762, z: 189.4353, w: 123.03174}
+  m_margin: {x: 53.461517, y: 122.21762, z: 189.4353, w: 123.03174}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
