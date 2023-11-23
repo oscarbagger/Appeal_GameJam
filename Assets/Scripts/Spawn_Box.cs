@@ -6,6 +6,7 @@ public class Spawn_Box : MonoBehaviour
 {
 
     Animator Animat;
+
     // Start is called before the first frame update
     void Start()
     {
