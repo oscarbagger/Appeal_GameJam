@@ -2721,6 +2721,7 @@ MonoBehaviour:
   music: {fileID: 1358719273}
   SFX: {fileID: 124351756}
   Background_intro: {fileID: 8300000, guid: 24161c04fbe81ff4dbd1ca7677af7897, type: 3}
+  Background_1stLoop: {fileID: 0}
   Background_Loop: {fileID: 0}
   Background_End: {fileID: 0}
   SFX_1: {fileID: 0}
