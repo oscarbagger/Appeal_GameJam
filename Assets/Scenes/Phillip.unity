@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5676906, g: 0.5676917, b: 0.582954, a: 1}
+  m_IndirectSpecularColor: {r: 0.5676734, g: 0.567685, b: 0.5829446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1417,13 +1417,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "My name is Sophie, I\u2019m 23 years old and live in Copenhagen. \nI've
-    been very good this year and I hope I\u2019m on the nice list. \nThis year, I
-    wish for a cozy Christmas game, with no competition. \nChristmas is my favorite
-    holiday of the year, it's so full of love and joy everywhere. I want the game
-    to be cozy above all else with snow drilling down outside. I wish for presents
-    under the tree and Christmas music playing in the background to fully tie together
-    the Christmas coziness.  \r"
+  m_text: "My name is Sophie\nI've been very good this year and I hope I\u2019m on
+    the nice list. \nThis year, I wish for a cozy Christmas game, with no competition.
+    I want a christmas game, where i can decorate my own christmas tree in a cosy
+    cabin, with snow drilling down outside. I wish for presents under the tree and
+    Christmas music playing in the background to fully tie together the Christmas
+    coziness.  \r\n\nLove Sophie"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
   m_sharedMaterial: {fileID: 4745618619330441754, guid: 5aa4411ba40e7f543834b43ada1b17f8, type: 2}
