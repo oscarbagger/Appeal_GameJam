@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Oscar.unity
     guid: 6d1ea39c295e3fd4998cd587b2848777
+  - enabled: 1
+    path: Assets/Scenes/Phillip.unity
+    guid: 85792ae62b649304f846c82adc44b1c5
   m_configObjects: {}
