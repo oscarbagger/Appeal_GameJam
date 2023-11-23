@@ -5,12 +5,12 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] presents;
-    private bool presentSpawned;
+    private int presentSpawned;
     public Transform spawnLocation;
 
     void Update() {
-        if (!presentSpawned && this.transform.childCount == 0) {
-            presentSpawned = true;
+        if (presentSpawned < 2 && this.transform.childCount == 0) {
+            presentSpawned = presentSpawned + 1;
             int choice = Random.Range(0, presents.Length);
             Instantiate(presents[choice], spawnLocation.position, Quaternion.identity);
         }
