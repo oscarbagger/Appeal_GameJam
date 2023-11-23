@@ -4,43 +4,45 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    public Vector3[] CameraPositions;
-    private int CameraPositionIndex=0;
+    public static bool zooming=false;
+    [SerializeField] private float zoomMultiplierX, zoomMultiplierY, zoomMultiplierZ;
+
+    public int CameraPositions = 3;
+    private int activeCameraPosition=1;
     [SerializeField] private float zoomTime;
     [SerializeField] private AnimationCurve cameraAnimCurve;
 
-    private void Start()
-    {
-        Camera.main.transform.position = CameraPositions[0];
-    }
-
     public void ZoomOut()
     {
-        if (CameraPositionIndex<CameraPositions.Length-1)
+        if (activeCameraPosition<CameraPositions)
         {
-            CameraPositionIndex++;
-            StartCoroutine(CameraMovement(CameraPositions[CameraPositionIndex - 1], CameraPositions[CameraPositionIndex], zoomTime));
+            activeCameraPosition++;
+            Vector3 newPosition = new Vector3(Camera.main.transform.position.x * zoomMultiplierX, Camera.main.transform.position.y * zoomMultiplierY, Camera.main.transform.position.z * zoomMultiplierZ);
+            StartCoroutine(CameraMovement(Camera.main.transform.position,newPosition , zoomTime));
         }
     }
     public void ZoomIn()
     {
-        if (CameraPositionIndex>0)
+        if (activeCameraPosition>1)
         {
-            CameraPositionIndex--;
-            StartCoroutine(CameraMovement(CameraPositions[CameraPositionIndex+1], CameraPositions[CameraPositionIndex], zoomTime));
+            activeCameraPosition--;
+            Vector3 newPosition = new Vector3(Camera.main.transform.position.x /zoomMultiplierX, Camera.main.transform.position.y / zoomMultiplierY, Camera.main.transform.position.z / zoomMultiplierZ);
+            StartCoroutine(CameraMovement(Camera.main.transform.position, newPosition, zoomTime));
         }
     }
 
     private IEnumerator CameraMovement(Vector3 start, Vector3 end, float time)
     {
+        zooming = true;
         float progress = 0f;
         while (progress < time)
         {
             progress = progress + Time.deltaTime;
             float percent = Mathf.Clamp01(progress / time);
             float curvePercent = cameraAnimCurve.Evaluate(percent);
-            transform.position = Vector3.LerpUnclamped(start, end, curvePercent);
+            transform.localPosition = Vector3.LerpUnclamped(start, end, curvePercent);
             yield return null;
         }
+        zooming = false;
     }
 }
