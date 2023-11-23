@@ -32,9 +32,25 @@ public class Pickup : MonoBehaviour
                         // if no, pick up this object.
                         PickUpObject(hitObj);
                     }
+                    //switch with other object if one already being held.
                     if (heldObject!=null)
                     {
-                        //switch with other object
+                        // check what it is switching with to see if it needs gravity
+                        if (hitObj.transform.parent==null)
+                        {
+                            heldObject.GetComponent<Rigidbody>().isKinematic = false;
+                            PutDownObject(heldObject, targetWorldPosition);
+                        }
+                        else if (hitObj.transform.parent.CompareTag("Tree"))
+                        {
+                            PutDownObject(heldObject, targetWorldPosition,hitObj.transform.parent);
+                        } else
+                        {
+                            heldObject.GetComponent<Rigidbody>().isKinematic = false;
+                            PutDownObject(heldObject, targetWorldPosition);
+                        }
+                        // switch out with the new object
+                        PickUpObject(hitObj);
                     }
                 }
                 if (hitObj.CompareTag("Tree"))
