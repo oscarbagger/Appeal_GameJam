@@ -5,12 +5,14 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public GameObject myPrefab;
+    public GameObject present1;
+    public GameObject present2;
 
     // This script will simply instantiate the Prefab when the game starts.
-    void Start()
+    void Update()
     {
-        // Instantiate at position (0, 0, 0) and zero rotation.
-        Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+       if(Input.GetKeyDown(KeyCode.Space)) {
+        Instantiate(present1, transform.position, Quaternion.identity);
+       }
     }
 }
