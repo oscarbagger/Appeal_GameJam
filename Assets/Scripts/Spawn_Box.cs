@@ -21,8 +21,6 @@ public class Spawn_Box : MonoBehaviour
         {
             boxes--;
             Animat.SetTrigger("Box_Ball");
-            Animat.SetTrigger("Cane_gone");
-            Animat.SetTrigger("Candle_Gone");
         }
     }
 
