@@ -13,7 +13,10 @@ public class Spawn_Box : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(this.transform.childCount == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
