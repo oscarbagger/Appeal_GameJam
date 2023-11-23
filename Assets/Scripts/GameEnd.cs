@@ -36,6 +36,7 @@ public class GameEnd : MonoBehaviour
             StartCoroutine(RocketTimer(cam.transform.position, camEndPos, animationTime,cam));
             isFlying = true;
             particle.Play();
+            endGameButton.SetActive(false);
         }
 
     }
