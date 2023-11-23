@@ -7,6 +7,7 @@ TagManager:
   - Tree
   - Pickup
   - Ground
+  - Box_Balls
   layers:
   - Default
   - TransparentFX
