@@ -20,6 +20,8 @@ public class Spawn_Box : MonoBehaviour
         { 
             Animat.SetTrigger("Box_Ball");
             Animat.SetTrigger("Cane_gone");
+            Animat.SetTrigger("Candle_gone");
+            
         }
     }
 
