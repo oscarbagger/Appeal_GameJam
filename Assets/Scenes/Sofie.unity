@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,7 +400,8 @@ MonoBehaviour:
   Background_1stLoop: {fileID: 8300000, guid: 687bd717dda81be43a410fe791e96365, type: 3}
   Background_Loop: {fileID: 8300000, guid: f98266839aa175a439ab331a5fdf8c3d, type: 3}
   Background_End: {fileID: 8300000, guid: 5e64db1cc1bacb1419bbda2503cf9cce, type: 3}
-  SFX_1: {fileID: 0}
+  Chimes: {fileID: 8300000, guid: bab27b624c5bd594b859eee9d64e0da2, type: 3}
+  SFX_1: {fileID: 8300000, guid: bab27b624c5bd594b859eee9d64e0da2, type: 3}
   SFX_2: {fileID: 0}
   SFX_3: {fileID: 0}
 --- !u!4 &95867877

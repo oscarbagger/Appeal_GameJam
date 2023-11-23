@@ -31,6 +31,11 @@ public class Audio_Man : MonoBehaviour
         music.Play();
     }
 
+    public void chimer()
+    {
+        SFX.PlayOneShot(SFX_1);
+    }
+
     public void Loop()
     {
         music.clip = Background_Loop;
