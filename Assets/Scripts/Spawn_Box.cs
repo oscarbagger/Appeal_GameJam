@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Spawn_Box : MonoBehaviour
 {
-
+    public static int boxes=0;
     Animator Animat;
 
     // Start is called before the first frame update
     void Start()
     {
+        boxes++;
         Animat = GetComponent<Animator>();
     }
 
@@ -17,11 +18,11 @@ public class Spawn_Box : MonoBehaviour
     void Update()
     {
         if(this.transform.childCount == 0)
-        { 
+        {
+            boxes--;
             Animat.SetTrigger("Box_Ball");
             Animat.SetTrigger("Cane_gone");
             Animat.SetTrigger("Candle_Gone");
-            
         }
     }
 
