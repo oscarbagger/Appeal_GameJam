@@ -14,7 +14,7 @@ public class CameraZoom : MonoBehaviour
         Camera.main.transform.position = CameraPositions[0];
     }
 
-    public void NextCameraPosition()
+    public void ZoomOut()
     {
         if (CameraPositionIndex<CameraPositions.Length-1)
         {
@@ -22,7 +22,7 @@ public class CameraZoom : MonoBehaviour
             StartCoroutine(CameraMovement(CameraPositions[CameraPositionIndex - 1], CameraPositions[CameraPositionIndex], zoomTime));
         }
     }
-    public void PreviousCameraPosition()
+    public void ZoomIn()
     {
         if (CameraPositionIndex>0)
         {
