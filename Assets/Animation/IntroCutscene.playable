@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Start: 0.08333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 6122025537881328558}
-    m_Duration: 10.700000000000001
+    m_Duration: 9.916666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8941520911544525323}
     m_EaseInDuration: 0
@@ -93,6 +93,22 @@ MonoBehaviour:
   m_Markers:
     m_Objects: []
   m_PostPlaybackState: 3
+--- !u!114 &-3246220328164384252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 10
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: c132abf493be1444eaffbe1499b4deba, type: 2}
 --- !u!114 &-3172163824925341453
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +227,7 @@ MonoBehaviour:
     m_Start: 0.08333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -385690497480195876}
-    m_Duration: 10.700000000000001
+    m_Duration: 9.916666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2637984256980907608}
     m_EaseInDuration: 0
@@ -335,10 +351,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 7.483333333333333
+    m_Start: 1.6500000000000017
     m_ClipIn: 0.06666666666666643
     m_Asset: {fileID: -278192075828244573}
-    m_Duration: 3.3000000000000007
+    m_Duration: 8.349999999999998
     m_TimeScale: 0.5
     m_ParentTrack: {fileID: -161994399913707743}
     m_EaseInDuration: 0
@@ -401,7 +417,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 7.483333333333333
+    m_PreExtrapolationTime: 1.6500000000000017
     m_DisplayName: EnvelopeGoAway
   m_Markers:
     m_Objects: []
@@ -444,6 +460,7 @@ MonoBehaviour:
   - {fileID: -2637984256980907608}
   - {fileID: -161994399913707743}
   - {fileID: 8579510017912126178}
+  - {fileID: 8081323172706993253}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -475,7 +492,7 @@ MonoBehaviour:
     m_Start: 0.08333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 4981942701627934162}
-    m_Duration: 10.700000000000001
+    m_Duration: 9.916666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: 121503116884741306}
     m_EaseInDuration: 0
@@ -632,7 +649,7 @@ MonoBehaviour:
     m_Start: 0.08333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 1733728204628186479}
-    m_Duration: 10.700000000000001
+    m_Duration: 9.916666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6757373075946228184}
     m_EaseInDuration: 0
@@ -722,6 +739,30 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &8081323172706993253
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46e36075dd1c124a8422c228e75e1fb, type: 3}
+  m_Name: Signal Track
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects:
+    - {fileID: -3246220328164384252}
 --- !u!114 &8579510017912126178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -744,10 +785,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 7.333333333333332
+    m_Start: 1.5
     m_ClipIn: 0
     m_Asset: {fileID: 7816534404923600897}
-    m_Duration: 1.6500000000000004
+    m_Duration: 8.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8579510017912126178}
     m_EaseInDuration: 0
@@ -792,7 +833,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 7.333333333333332
+    m_PreExtrapolationTime: 1.5
     m_DisplayName: LetterGoUp
   m_Markers:
     m_Objects: []

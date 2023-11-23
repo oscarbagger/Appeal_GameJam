@@ -17,4 +17,9 @@ public class SantaLetter : MonoBehaviour
     {
         
     }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

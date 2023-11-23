@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 995704257}
   - component: {fileID: 995704258}
   - component: {fileID: 995704259}
+  - component: {fileID: 995704260}
   m_Layer: 5
   m_Name: LetterCanvas
   m_TagString: Untagged
@@ -512,8 +513,11 @@ PlayableDirector:
     value: {fileID: 995704257}
   - key: {fileID: 8579510017912126178, guid: 35067027607d1be40847057d6697d630, type: 2}
     value: {fileID: 1501364648}
+  - key: {fileID: 8081323172706993253, guid: 35067027607d1be40847057d6697d630, type: 2}
+    value: {fileID: 995704260}
   m_ExposedReferences:
     m_References:
+    - a73584666b515fe4f8bbbfa41e3910a3: {fileID: 995704252}
     - e71bbe907dea3114aa2b9677a8844898: {fileID: 995704252}
 --- !u!114 &995704259
 MonoBehaviour:
@@ -527,7 +531,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f8a20ab14884effb70578a2df2e2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterClosed: {fileID: 1611965695}
+--- !u!114 &995704260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995704252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: c132abf493be1444eaffbe1499b4deba, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 995704259}
+          m_TargetAssemblyTypeName: SantaLetter, Assembly-CSharp
+          m_MethodName: NextScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1006462190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,7 +1489,7 @@ MonoBehaviour:
   m_margin: {x: 40, y: 137.20093, z: 184.62402, w: 123.03174}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1867568398
